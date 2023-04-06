@@ -9,5 +9,5 @@ import SwiftUI
 
 @MainActor
 class DogViewModel: ObservableObject {
-    let directoryService = DirectoryService.shared
+    let directoryService = DirectoryService()
 }

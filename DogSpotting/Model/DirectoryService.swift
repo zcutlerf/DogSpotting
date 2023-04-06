@@ -11,13 +11,6 @@ import Foundation
 class DirectoryService {
     let encoder = JSONEncoder()
     let decoder = JSONDecoder()
-    let directory: () throws -> URL = {
-        try FileManager.default
-            .url(for: .documentDirectory,
-                 in: .userDomainMask,
-                 appropriateFor: nil,
-                 create: false)
-    }
     
     func saveModelToDisk<T: Codable>(_ models: [T]) {
         do {
@@ -40,5 +33,12 @@ class DirectoryService {
             return []
         }
     }
-    static let shared = DirectoryService()
+    
+    private func directory() throws -> URL {
+        try FileManager.default
+            .url(for: .documentDirectory,
+                 in: .userDomainMask,
+                 appropriateFor: nil,
+                 create: false)
+    }
 }
