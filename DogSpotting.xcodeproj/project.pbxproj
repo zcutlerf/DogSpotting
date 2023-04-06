@@ -14,6 +14,7 @@
 		5D2F294529DF0A16008A669D /* NewSpotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2F294429DF0A16008A669D /* NewSpotView.swift */; };
 		5D2F294729DF15F4008A669D /* DogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2F294629DF15F4008A669D /* DogViewModel.swift */; };
 		5D2F294929DF161C008A669D /* DogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2F294829DF161C008A669D /* DogModel.swift */; };
+		7485F4DA29DF375500DD9419 /* DirectoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7485F4D929DF375500DD9419 /* DirectoryService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		5D2F294429DF0A16008A669D /* NewSpotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSpotView.swift; sourceTree = "<group>"; };
 		5D2F294629DF15F4008A669D /* DogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogViewModel.swift; sourceTree = "<group>"; };
 		5D2F294829DF161C008A669D /* DogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogModel.swift; sourceTree = "<group>"; };
+		7485F4D929DF375500DD9419 /* DirectoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +60,9 @@
 			isa = PBXGroup;
 			children = (
 				5D2F293629DF09D8008A669D /* DogSpottingApp.swift */,
+				5D2F294A29DF1620008A669D /* Model */,
 				5D2F294C29DF162B008A669D /* View */,
 				5D2F294B29DF1625008A669D /* ViewModel */,
-				5D2F294A29DF1620008A669D /* Model */,
 				5D2F293A29DF09D9008A669D /* Assets.xcassets */,
 				5D2F293C29DF09D9008A669D /* Preview Content */,
 			);
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				5D2F294829DF161C008A669D /* DogModel.swift */,
+				7485F4D929DF375500DD9419 /* DirectoryService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D2F293929DF09D8008A669D /* ContentView.swift in Sources */,
+				7485F4DA29DF375500DD9419 /* DirectoryService.swift in Sources */,
 				5D2F294929DF161C008A669D /* DogModel.swift in Sources */,
 				5D2F293729DF09D8008A669D /* DogSpottingApp.swift in Sources */,
 				5D2F294529DF0A16008A669D /* NewSpotView.swift in Sources */,
@@ -303,7 +307,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DogSpotting/Preview Content\"";
-				DEVELOPMENT_TEAM = 94AXJS8DQZ;
+				DEVELOPMENT_TEAM = 3UR85MK9RT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -333,7 +337,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DogSpotting/Preview Content\"";
-				DEVELOPMENT_TEAM = 94AXJS8DQZ;
+				DEVELOPMENT_TEAM = 3UR85MK9RT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
