@@ -16,7 +16,7 @@ class DirectoryService {
         do {
             try encoder
                 .encode(models)
-                .write(to: directory())
+                .write(to: directory().appendingPathComponent("\(T.self).json"))
         } catch {
             debugPrint(error)
         }
@@ -24,7 +24,7 @@ class DirectoryService {
     
     func readModelToDisk<T:Codable>() -> [T] {
         do {
-            let encodedModels = try Data(contentsOf: directory())
+            let encodedModels = try Data(contentsOf: directory().appendingPathComponent("\(T.self).json"))
             let decodedModels = try decoder
                 .decode([T].self, from: encodedModels)
             return decodedModels

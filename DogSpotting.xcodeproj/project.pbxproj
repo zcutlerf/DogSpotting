@@ -15,6 +15,8 @@
 		5D2F294729DF15F4008A669D /* DogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2F294629DF15F4008A669D /* DogViewModel.swift */; };
 		5D2F294929DF161C008A669D /* DogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2F294829DF161C008A669D /* DogModel.swift */; };
 		7485F4DA29DF375500DD9419 /* DirectoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7485F4D929DF375500DD9419 /* DirectoryService.swift */; };
+		7485F4DC29DF458F00DD9419 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7485F4DB29DF458F00DD9419 /* Camera.swift */; };
+		7485F4DE29DF465100DD9419 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7485F4DD29DF465100DD9419 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		5D2F294629DF15F4008A669D /* DogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogViewModel.swift; sourceTree = "<group>"; };
 		5D2F294829DF161C008A669D /* DogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogModel.swift; sourceTree = "<group>"; };
 		7485F4D929DF375500DD9419 /* DirectoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryService.swift; sourceTree = "<group>"; };
+		7485F4DB29DF458F00DD9419 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		7485F4DD29DF465100DD9419 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 			children = (
 				5D2F294829DF161C008A669D /* DogModel.swift */,
 				7485F4D929DF375500DD9419 /* DirectoryService.swift */,
+				7485F4DB29DF458F00DD9419 /* Camera.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -99,6 +104,7 @@
 			children = (
 				5D2F293829DF09D8008A669D /* ContentView.swift */,
 				5D2F294429DF0A16008A669D /* NewSpotView.swift */,
+				7485F4DD29DF465100DD9419 /* ImagePicker.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -178,6 +184,8 @@
 				5D2F294929DF161C008A669D /* DogModel.swift in Sources */,
 				5D2F293729DF09D8008A669D /* DogSpottingApp.swift in Sources */,
 				5D2F294529DF0A16008A669D /* NewSpotView.swift in Sources */,
+				7485F4DE29DF465100DD9419 /* ImagePicker.swift in Sources */,
+				7485F4DC29DF458F00DD9419 /* Camera.swift in Sources */,
 				5D2F294729DF15F4008A669D /* DogViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

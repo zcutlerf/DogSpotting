@@ -15,10 +15,10 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            List {
+            List(dogVM.dogs) { dog in
                 HStack {
                     //User-inputted image of the dog spotted
-                    Image("sampleDog")
+                    Image(dog.photoName)
                         .resizable()
                         .scaledToFit()
                         .frame(maxHeight: 200.0)
@@ -26,16 +26,15 @@ struct ContentView: View {
                     //Information about the dog spotted
                     VStack(alignment: .leading) {
                         //Dog's name
-                        Text("Fido")
+                        Text(dog.name)
                             .font(.title)
                         
                         //Time when dog was seen
-                        Text("Seen on \(Date().formatted())")
+                        Text("Seen on \(dog.dateSpotted.formatted())")
                             .foregroundColor(.secondary)
                         
-                        //Location where dog was spotted
-                        Text("Latitude: \(CLLocation(latitude: 42.3314, longitude: -83.0458).coordinate.latitude.description)")
-                        Text("Longitude: \(CLLocation(latitude: 42.3314, longitude: -83.0458).coordinate.longitude.description)")
+                        //Size of Doge
+                        Text(dog.size.rawValue)
                     }
                 }
             }

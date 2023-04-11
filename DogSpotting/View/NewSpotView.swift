@@ -9,22 +9,27 @@ import SwiftUI
 import CoreLocation
 
 struct NewSpotView: View {
+    @Environment(\.dismiss) var dismiss
+    
     @ObservedObject var dogVM: DogViewModel
     
     @State private var name = ""
-    @State private var location = CLLocation(latitude: 42.3314, longitude: -83.0458)
-    @State private var image: Image?
+    @State private var size = DogModel.DogSize.smollboi
+    @State private var image: UIImage?
+    @State private var showingImagePicker = false
+    
     
     var body: some View {
         NavigationStack {
             Form {
                 if let image = image {
-                    image
+                    Image(uiImage: image)
                         .resizable()
                         .scaledToFit()
                         .frame(maxHeight: 200.0)
                 } else {
                     Button {
+                        showingImagePicker = true
                         //TODO: Ask for the user's camera, and take photo.
                     } label: {
                         HStack {
@@ -38,12 +43,19 @@ struct NewSpotView: View {
                 
                 TextField("Dog's Name", text: $name)
                 
-                //TODO: Ask for the user's location, and update location variable.
-                Text(location.description)
+                Picker("Size", selection: $size) {
+                    Text("small")
+                        .tag(DogModel.DogSize.smollboi)
+                    Text("med")
+                        .tag(DogModel.DogSize.medium)
+                    Text("large")
+                        .tag(DogModel.DogSize.large)
+                }
                 
                 Section {
                     Button {
-                        
+                        dogVM.addNewDog(with: name, and: size)
+                        dismiss()
                     } label: {
                         HStack {
                             Spacer()
@@ -55,9 +67,12 @@ struct NewSpotView: View {
                     }
                     .buttonStyle(.borderedProminent)
                 }
-                .disabled(name == "" || image == nil)
+                .disabled(name == "")
             }
             .navigationTitle("You saw one???")
+            .sheet(isPresented: $showingImagePicker) {
+                ImagePicker(sourceType: .camera, selectedImage: $image)
+            }
         }
     }
 }
