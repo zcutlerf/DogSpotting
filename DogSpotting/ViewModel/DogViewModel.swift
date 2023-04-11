@@ -8,18 +8,22 @@
 import SwiftUI
 
 class DogViewModel: ObservableObject {
+    // TODO: Store an array of dogs that the user has seen.
         
     init() {
-        // code to run when a ViewModel instance is created
+        // TODO: code to run when a ViewModel instance is created
     }
     
-    func addNewDog(_ name: String, size: String) { }
+    func addNewDog(_ name: String, size: String) {
+        // TODO: Ensure size is strictly typed (i.e.: use an enum instead of a string.)
+        // TODO: Add a new dog to our array of dogs.
+    }
     
     func saveDogs() {
-        // Use the function defined in the Encodable extension to save your dogs
+        // TODO: Use the function defined in the Encodable extension to save the dogs the user has seen.
     }
     
     func loadDogs() {
-        // Use the function defined in the Decodable extension to load your dogs
+        // TODO: Use the function defined in the Decodable extension to load previously saved dogs.
     }
 }

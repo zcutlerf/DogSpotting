@@ -49,7 +49,7 @@ struct NewSpotView: View {
                                 
                 Section {
                     Button {
-                        // TODO: Add new dog to our ViewModel's list of dogs.
+                        dogVM.addNewDog(name, size: selectedSize)
                     } label: {
                         HStack {
                             Spacer()
