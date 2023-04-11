@@ -66,6 +66,8 @@ struct NewSpotView: View {
                 .disabled(name == "" || uiimage == nil)
             }
             .navigationTitle("You saw one???")
+        }.sheet(isPresented: $isTakingPhoto) {
+            ImagePicker(selectedImage: $uiimage)
         }
         .sheet(isPresented: $isTakingPhoto) {
             ImagePicker(selectedImage: $uiimage)
