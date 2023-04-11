@@ -15,7 +15,7 @@ extension Decodable {
                      in: .userDomainMask,
                      appropriateFor: nil,
                      create: false)
-            let encodedModels = try Data(contentsOf: directory)
+            let encodedModels = try Data(contentsOf: directory.appendingPathComponent("\(T.self).json"))
             let decodedModels = try JSONDecoder()
                 .decode([T].self, from: encodedModels)
             return decodedModels
