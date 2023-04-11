@@ -15,20 +15,21 @@ struct NewSpotView: View {
     
     @State private var name = ""
     @State private var location = CLLocation(latitude: 42.3314, longitude: -83.0458)
-    @State private var image: Image?
-    @State private var selectedSize = ""
+    @State private var uiimage: UIImage?
+    @State private var selectedSize = "Small"
+    @State private var isTakingPhoto = false
     
     var body: some View {
         NavigationStack {
             Form {
-                if let image = image {
+                if let uiimage = uiimage, let image = Image(uiImage: uiimage) {
                     image
                         .resizable()
                         .scaledToFit()
                         .frame(maxHeight: 200.0)
                 } else {
                     Button {
-                        //TODO: Ask for the user's camera, and take photo.
+                        //TODO: Ask for the user's camera, and present ImagePicker view.
                     } label: {
                         HStack {
                             Image(systemName: "camera")
@@ -62,9 +63,12 @@ struct NewSpotView: View {
                     }
                     .buttonStyle(.borderedProminent)
                 }
-                .disabled(name == "" || image == nil)
+                .disabled(name == "" || uiimage == nil)
             }
             .navigationTitle("You saw one???")
+        }
+        .sheet(isPresented: $isTakingPhoto) {
+            ImagePicker(selectedImage: $uiimage)
         }
     }
 }
