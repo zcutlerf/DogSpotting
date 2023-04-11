@@ -9,5 +9,9 @@ import SwiftUI
 
 @MainActor
 class DogViewModel: ObservableObject {
-    let directoryService = DirectoryService()
+//    let directoryService = DirectoryService()
+    
+    public func addNewDog(_ name: String, size: String) { }
+    
+    
 }

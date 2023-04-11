@@ -9,11 +9,14 @@ import SwiftUI
 import CoreLocation
 
 struct NewSpotView: View {
+    @Environment(\.dismiss) var dismiss
+    
     @ObservedObject var dogVM: DogViewModel
     
     @State private var name = ""
     @State private var location = CLLocation(latitude: 42.3314, longitude: -83.0458)
     @State private var image: Image?
+    @State private var selectedSize = ""
     
     var body: some View {
         NavigationStack {
@@ -37,10 +40,14 @@ struct NewSpotView: View {
                 }
                 
                 TextField("Dog's Name", text: $name)
-                
-                //TODO: Ask for the user's location, and update location variable.
-                Text(location.description)
-                
+                Picker("Dog Size", selection: $selectedSize) {
+                    Text("Extra Small").tag("xs")
+                    Text("Small").tag("s")
+                    Text("Medium").tag("m")
+                    Text("Large").tag("l")
+                    Text("Extra Large").tag("xl")
+                }
+                                
                 Section {
                     Button {
                         

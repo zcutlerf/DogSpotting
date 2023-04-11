@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import CoreLocation
 
 struct ContentView: View {
     @StateObject var dogVM = DogViewModel()
@@ -28,14 +27,12 @@ struct ContentView: View {
                         //Dog's name
                         Text("Fido")
                             .font(.title)
+                        Text("Small")
+                            .font(.title2)
                         
                         //Time when dog was seen
                         Text("Seen on \(Date().formatted())")
                             .foregroundColor(.secondary)
-                        
-                        //Location where dog was spotted
-                        Text("Latitude: \(CLLocation(latitude: 42.3314, longitude: -83.0458).coordinate.latitude.description)")
-                        Text("Longitude: \(CLLocation(latitude: 42.3314, longitude: -83.0458).coordinate.longitude.description)")
                     }
                 }
             }
