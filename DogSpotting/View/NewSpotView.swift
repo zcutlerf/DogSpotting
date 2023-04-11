@@ -61,7 +61,7 @@ struct NewSpotView: View {
                     }
                     .buttonStyle(.borderedProminent)
                 }
-                .disabled(name == "" || uiimage == nil)
+                .disabled(name == "")
             }
             .navigationTitle("You saw one???")
         }.sheet(isPresented: $isTakingPhoto) {
