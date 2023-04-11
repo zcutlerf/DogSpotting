@@ -14,7 +14,6 @@ struct NewSpotView: View {
     @ObservedObject var dogVM: DogViewModel
     
     @State private var name = ""
-    @State private var location = CLLocation(latitude: 42.3314, longitude: -83.0458)
     @State private var uiimage: UIImage?
     @State private var selectedSize = "Small"
     @State private var isTakingPhoto = false
@@ -22,8 +21,8 @@ struct NewSpotView: View {
     var body: some View {
         NavigationStack {
             Form {
-                if let uiimage = uiimage, let image = Image(uiImage: uiimage) {
-                    image
+                if let uiimage = uiimage {
+                    Image(uiImage: uiimage)
                         .resizable()
                         .scaledToFit()
                         .frame(maxHeight: 200.0)
