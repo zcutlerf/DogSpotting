@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import CoreLocation
 
 struct NewSpotView: View {
     @Environment(\.dismiss) var dismiss
