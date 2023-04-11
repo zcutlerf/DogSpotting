@@ -8,6 +8,8 @@
 import SwiftUI
 
 class DogViewModel: ObservableObject {
+    let directoryService = DirectoryService()
+    
     // TODO: Store an array of dogs that the user has seen.
         
     init() {

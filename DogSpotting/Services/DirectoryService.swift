@@ -1,5 +1,5 @@
 //
-//  Codable+Extension.swift
+//  DirectoryService.swift
 //  DogSpotting
 //
 //  Created by Cory Tripathy on 4/6/23.
@@ -7,8 +7,8 @@
 
 import Foundation
 
-extension Decodable {
-    func readModelFromDisk<T: Decodable>() -> [T] {
+final class DirectoryService {
+    public func readModelFromDisk<T: Decodable>() -> [T] {
         do {
             let directory = try FileManager.default
                 .url(for: .documentDirectory,
@@ -24,10 +24,8 @@ extension Decodable {
             return []
         }
     }
-}
-
-extension Encodable {
-    func writeModelToDisk<T:Encodable>(_ models: [T]) {
+    
+    public func writeModelToDisk<T:Encodable>(_ models: [T]) {
         do {
             let directory = try FileManager.default
                 .url(for: .documentDirectory,
