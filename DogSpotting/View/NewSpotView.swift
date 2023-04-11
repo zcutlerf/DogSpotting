@@ -50,6 +50,7 @@ struct NewSpotView: View {
                 Section {
                     Button {
                         dogVM.addNewDog(name, size: selectedSize)
+                        dismiss()
                     } label: {
                         HStack {
                             Spacer()
