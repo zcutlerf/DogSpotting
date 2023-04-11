@@ -69,9 +69,6 @@ struct NewSpotView: View {
         }.sheet(isPresented: $isTakingPhoto) {
             ImagePicker(selectedImage: $uiimage)
         }
-        .sheet(isPresented: $isTakingPhoto) {
-            ImagePicker(selectedImage: $uiimage)
-        }
     }
 }
 
