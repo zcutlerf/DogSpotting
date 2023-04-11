@@ -36,7 +36,7 @@ extension Encodable {
                      create: false)
             try JSONEncoder()
                 .encode(models)
-                .write(to: directory)
+                .write(to: directory.appendingPathComponent("\(T.self).json"))
         } catch {
             debugPrint(error)
         }
