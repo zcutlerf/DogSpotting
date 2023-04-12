@@ -66,10 +66,11 @@
 			isa = PBXGroup;
 			children = (
 				5D2F293629DF09D8008A669D /* DogSpottingApp.swift */,
-				74BA5F5829E5A57700C28F2F /* Services */,
-				5D2F294A29DF1620008A669D /* Model */,
 				5D2F294C29DF162B008A669D /* View */,
 				5D2F294B29DF1625008A669D /* ViewModel */,
+				5D2F294A29DF1620008A669D /* Model */,
+				7478C72E29E705EF006ED737 /* Extensions */,
+				74BA5F5829E5A57700C28F2F /* Services */,
 				5D2F293A29DF09D9008A669D /* Assets.xcassets */,
 				5D2F293C29DF09D9008A669D /* Preview Content */,
 			);
@@ -111,11 +112,18 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		7478C72E29E705EF006ED737 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7478C72C29E6FF92006ED737 /* UIImage+Codable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		74BA5F5829E5A57700C28F2F /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				7485F4D929DF375500DD9419 /* DirectoryService.swift */,
-				7478C72C29E6FF92006ED737 /* UIImage+Codable.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
