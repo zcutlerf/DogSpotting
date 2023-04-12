@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import UIKit
 
 struct DogModel {
+    
 }
 
