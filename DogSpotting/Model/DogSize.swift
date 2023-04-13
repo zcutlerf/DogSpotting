@@ -7,6 +7,7 @@
 
 import Foundation
 
+///Represents the different sizes of dogs that can be seen.
 enum DogSize: String, CaseIterable, Identifiable, Codable {
     
     var id: String {

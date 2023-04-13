@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+///Stores the dogs the user has seen, and handles CRUD operations for the user's data.
 class DogViewModel: ObservableObject {
     let directoryService = DirectoryService()
     

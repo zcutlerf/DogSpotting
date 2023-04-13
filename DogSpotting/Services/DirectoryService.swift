@@ -7,6 +7,7 @@
 
 import Foundation
 
+///This class allows us to write/read any of our models to/from the app's documents directory.
 final class DirectoryService {
     public func readModelFromDisk<T: Decodable>() -> [T] {
         do {

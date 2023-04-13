@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+// These extensions allow us to encode/decode an image to/from the documents directory, so the user can persist the dogs they have seen.
 extension UIImage: Codable {
     enum CodingKeys: CodingKey {
         case data

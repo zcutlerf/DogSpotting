@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 
+///Represents a dog the user has seen.
 struct DogModel {
-    
+    //TODO: Add properties to our DogModel.
 }
 

@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import SwiftUI
 
+///Makes UIImagePickerController from UIKit available to SwiftUI.
 struct ImagePicker: UIViewControllerRepresentable {
     @Environment(\.presentationMode) private var presentationMode
     var sourceType: UIImagePickerController.SourceType = .camera
