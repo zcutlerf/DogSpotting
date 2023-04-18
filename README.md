@@ -3,16 +3,16 @@
 ## DAY 1
 ### Model
 
-Create dog model with 4 properties: name, dateSpotted, uiImage, and size
-Create sample data
-In ContentView, list DogModel.sampleData and replace literal strings with dog model properties (you’ll need to conform to identifiable protocol to do this)
-Define DogSize as an enum
-change the Picker in ContentView to go through enum cases instead of string
+- Create dog model with 4 properties: name, dateSpotted, uiImage, and size
+- Create sample data
+- In ContentView, list DogModel.sampleData and replace literal strings with dog model properties (you’ll need to conform to identifiable protocol to do this)
+- Define DogSize as an enum
+- Change the Picker in ContentView to go through enum cases instead of string
 
 ## DAY 2
 ### ViewModel
 
-create @published var dogs: [DogModel]
+- Create @published var dogs: [DogModel]
 define the method addNewDog, and make sure you’re passing in the enum from AddSpotView
 change the dogs in List to reference vm.dogs
 define saveDogs()
