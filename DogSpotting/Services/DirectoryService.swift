@@ -9,7 +9,7 @@ import Foundation
 
 ///This class allows us to write/read any of our models to/from the app's documents directory.
 final class DirectoryService {
-    public func readModelFromDisk<T: Decodable>() -> [T] {
+    public static func readModelFromDisk<T: Decodable>() -> [T] {
         do {
             let directory = try FileManager.default
                 .url(for: .documentDirectory,
@@ -26,7 +26,7 @@ final class DirectoryService {
         }
     }
     
-    public func writeModelToDisk<T:Encodable>(_ models: [T]) {
+    public static func writeModelToDisk<T:Encodable>(_ models: [T]) {
         do {
             let directory = try FileManager.default
                 .url(for: .documentDirectory,

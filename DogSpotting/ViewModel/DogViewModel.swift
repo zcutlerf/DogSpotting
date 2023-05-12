@@ -18,7 +18,6 @@ class DogViewModel: ObservableObject {
     }
     
     func addNewDog(_ name: String, size: DogSize) {
-        // TODO: Ensure size is strictly typed (i.e.: use an enum instead of a string.)
         // TODO: Add a new dog to our array of dogs.
     }
     

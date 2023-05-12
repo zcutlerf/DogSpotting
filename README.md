@@ -25,27 +25,40 @@
 ## DAY 2
 ### Create your ViewModel
 
-- Create @published var dogs: [DogModel]
-- define the method addNewDog, and make sure you’re passing in the enum from AddSpotView
-- change the dogs in List to reference vm.dogs
-- define saveDogs()
-- make dogsize, dogmodel codable
-- define loadDogs()
-- stretch: swipe to delete dogs
+1. Create an array of `DogModel` as a property of DogViewModel (DogViewModel.swift)
+    * Use the [`@Published`](https://www.hackingwithswift.com/quick-start/swiftui/what-is-the-published-property-wrapper) property wrapper to communicate with the view when the value changes.
+2. Define the method `addNewDog(_: size:)`
+    * Make sure you’re passing in the correct size enum value from from NewSpotView.
+    * Create a new dog and add it to our array of dogs.
+3. In ContentView, update List to use array you just created
+    * Instead of something like `List(DogModel.sampleData`, use `List(dogVM.dogs)`.
+4. Define the method `saveDogs()`
+    * Use the method `DirectoryService.writeModelToDisk(_:)` to save the dogs the user has seen.
+    * In order for this to work, you'll have to conform DogSize and DogModel to the [`Codable`](https://www.swiftbysundell.com/basics/codable/) protocol.
+6. Define the method `loadDogs()`
+    * Use the method `DirectoryService.readModelFromDisk()` to load the dogs the user previously stored, and put the dogs we load back in our array.
+    * _Tip: We'll want to call this method whenever the app opens, i.e. whenever a new instance of DogViewModel is created. We can call this method during [initialization](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/initialization/) ._
+7. Stretch Task: Swipe to delete dogs in ContentView
 
 ## DAY 3
 ### Access Protected Resources
 
-- DogModel stores a UIImage instead of string imageName
-- ContentView shows an image from a UIImage instead of based on a string name
+1. Update DogModel to store a UIImage instead of a string imageName.
+    * _Note: Check out UIImage+Codable.Swift if you want to learn how we were able to make a UIImage Codable so we could store it to the documents directory._
+2. ContentView shows a SwiftUI Image from a UIImage instead of based on a string name.
+    * _Tip: Use the_ `Image(uiImage:)` _initializer to make this happen._
 
 ## DAY 4
 ### Imprpove Accessibility
 
-- Discuss different ways to provide voiceover labels - children combine, ignore, etc
-- Choose your own accent color and ensure it has light, dark, high contrast versions
+1. Improve VoiceOver experience by [labeling views](https://www.hackingwithswift.com/books/ios-swiftui/identifying-views-with-useful-labels) in a helpful way.
+2. Choose your own [accent color](https://developer.apple.com/documentation/xcode/specifying-your-apps-color-scheme) and ensure it has light and dark mode, as well as high contrast versions for both modes.
 
 ## DAY 5
 ### Implement Localization
 
-- Localize all static text in the app (nav titles and buttons, date label, dog sizes)
+1. [Localize](https://developer.apple.com/documentation/xcode/localization) all static text in the app
+    * Navigation titles
+    * Buttons
+    * Date label
+    * DogSize - we might need to use [raw values](https://www.hackingwithswift.com/sixty/2/10/enum-raw-values) in our enum to do this
