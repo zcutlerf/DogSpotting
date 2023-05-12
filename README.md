@@ -5,18 +5,18 @@
 
 1. Fill out `DogModel` [struct](https://www.hackingwithswift.com/read/0/15/structs) (DogModel.swift)
     * Based on our Hi-Fi, which properties do we need?
-    * What types will these properties have?
+    * What types will these properties have? (String, Int, Date, etc)
     * _Tip: Remember that this is just the definition of our struct, which is designed to hold the information about just 1 dog._
 2. Create sample data
-    * Create an array of dogs as a property of `DogSize`.
+    * Create an array of dogs as a property of `DogModel`.
     * Use the [`static`](https://www.hackingwithswift.com/read/0/18/static-properties-and-methods) keyword on your property to make it belong to the type itself rather than instances.
     * You can use the "sampleDog" image in the assets folder or add your own dog images.
     * _Tip: Creating sample data is helpful when we want to preview our SwiftUI Views before we have full interactivity set up._
 3. List `DogModel`'s sample data in ContentView
     * Replace string literals inside your [List](https://developer.apple.com/documentation/swiftui/list) with references to dog model properties.
-    * _Tip: You'll need_ `DogModel` _to conform to the_ [`Identifiable`](https://www.hackingwithswift.com/books/ios-swiftui/working-with-identifiable-items-in-swiftui) _protocol to do this_
-4. Define `DogSize` [enum](https://www.hackingwithswift.com/read/0/14/enumerations)
-    * Fill out `DogSize` enum with relevant cases to represent the sizes of dogs available.
+    * _Tip: You'll need_ `DogModel` _to conform to the_ [`Identifiable`](https://www.hackingwithswift.com/books/ios-swiftui/working-with-identifiable-items-in-swiftui) _protocol to do this._
+4. Define `DogSize` [enum](https://www.hackingwithswift.com/read/0/14/enumerations) (DogSize.swift)
+    * Choose relevant cases to represent the sizes of dogs available.
     * If you defined size as a String in your `DogModel`, go back into and use your enum instead.
 5. Update the [`Picker`](https://developer.apple.com/documentation/swiftui/picker) in NewSpotView
     * Instead of tagging the picker with strings, use the enum cases as tags.
