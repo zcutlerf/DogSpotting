@@ -14,7 +14,7 @@ struct NewSpotView: View {
     
     @State private var name = ""
     @State private var uiimage: UIImage?
-    @State private var selectedSize = "Small"
+    @State private var selectedSize = DogSize.small
     @State private var isTakingPhoto = false
     
     var body: some View {
@@ -42,16 +42,15 @@ struct NewSpotView: View {
                 
                 //TODO: Update the picker to use the DogSize enum instead of String literals.
                 Picker("Dog Size", selection: $selectedSize) {
-                    Text("Extra Small").tag("xs")
-                    Text("Small").tag("s")
-                    Text("Medium").tag("m")
-                    Text("Large").tag("l")
-                    Text("Extra Large").tag("xl")
+                    ForEach(DogSize.allCases) { size in
+                        Text(size.rawValue)
+                            .tag(size)
+                    }
                 }
                                 
                 Section {
                     Button {
-                        dogVM.addNewDog(name, size: .idk)
+                        dogVM.addNewDog(name, size: selectedSize)
                         dismiss()
                     } label: {
                         HStack {

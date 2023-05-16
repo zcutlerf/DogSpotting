@@ -14,6 +14,5 @@ enum DogSize: String, CaseIterable, Identifiable, Codable {
         self.rawValue
     }
     
-    //TODO: Add cases to represent the different sizes of dogs that exist.
-    case idk
+    case small, medium, large
 }
