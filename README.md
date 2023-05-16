@@ -22,6 +22,8 @@
     * Instead of tagging the picker with strings, use the enum cases as tags.
     * Udpdate the `selectedSize` property of NewSpotView to rely on the enum instead of a string.
 
+(Check out day-1-solution branch to see one potential solution to the above tasks.)
+
 ## DAY 2
 ### Create your ViewModel
 
