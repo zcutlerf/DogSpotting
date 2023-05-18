@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 ///Represents a dog the user has seen.
-struct DogModel: Identifiable {
+struct DogModel: Identifiable, Codable {
     var id = UUID()
     var name: String
     var dateSeen = Date()

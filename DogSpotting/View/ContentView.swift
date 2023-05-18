@@ -14,7 +14,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            List(DogModel.sampleDogs) { dog in
+            List(dogVM.dogsSeen) { dog in
                 HStack {
                     //User-inputted image of the dog spotted
                     Image(dog.photoName)
