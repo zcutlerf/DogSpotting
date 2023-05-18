@@ -9,8 +9,6 @@ import SwiftUI
 
 ///Stores the dogs the user has seen, and handles CRUD operations for the user's data.
 class DogViewModel: ObservableObject {
-    let directoryService = DirectoryService()
-    
     // TODO: Store an array of dogs that the user has seen.
         
     init() {
@@ -22,10 +20,10 @@ class DogViewModel: ObservableObject {
     }
     
     func saveDogs() {
-        // TODO: Use the function defined in the Encodable extension to save the dogs the user has seen.
+        // TODO: Use the static function DirectoryService.writeModelToDisk(_:) to save our array of dogs to the app's documents directory.
     }
     
     func loadDogs() {
-        // TODO: Use the function defined in the Decodable extension to load previously saved dogs.
+        // TODO: Use the static function DirectoryService.readModelFromDisk() to read our previously saved array of dogs from our app's documents directory.
     }
 }

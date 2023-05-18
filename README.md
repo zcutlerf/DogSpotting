@@ -40,6 +40,8 @@
     * _Tip: We'll want to call this method whenever the app opens, i.e. whenever a new instance of DogViewModel is created. We can call this method during [initialization](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/initialization/) ._
 7. Stretch Task: Swipe to delete dogs in ContentView
 
+(Check out day-2-solution branch to see one potential solution to the above tasks.)
+
 ## DAY 3
 ### Access Protected Resources
 
