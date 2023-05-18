@@ -35,6 +35,7 @@
 4. Define the method `saveDogs()`
     * Use the method `DirectoryService.writeModelToDisk(_:)` to save the dogs the user has seen.
     * In order for this to work, you'll have to conform DogSize and DogModel to the [`Codable`](https://www.swiftbysundell.com/basics/codable/) protocol.
+    * When should we save the dogs we have seen? The easiest place would be to save them every time we add a new dog.
 6. Define the method `loadDogs()`
     * Use the method `DirectoryService.readModelFromDisk()` to load the dogs the user previously stored, and put the dogs we load back in our array.
     * _Tip: We'll want to call this method whenever the app opens, i.e. whenever a new instance of DogViewModel is created. We can call this method during [initialization](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/initialization/) ._
