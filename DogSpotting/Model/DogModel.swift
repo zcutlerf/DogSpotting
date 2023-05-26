@@ -14,12 +14,12 @@ struct DogModel: Identifiable, Codable {
     var name: String
     var dateSeen = Date()
     var size: DogSize
-    var photoName: String
+    var image: UIImage
     
-    static var sampleDogs: [DogModel] = [
-        DogModel(name: "Fido", size: .small, photoName: "sampleDog"),
-        DogModel(name: "Spot", size: .medium, photoName: "sampleDog"),
-        DogModel(name: "Daisy", size: .large, photoName: "sampleDog")
-    ]
+//    static var sampleDogs: [DogModel] = [
+//        DogModel(name: "Fido", size: .small, photoName: "sampleDog"),
+//        DogModel(name: "Spot", size: .medium, photoName: "sampleDog"),
+//        DogModel(name: "Daisy", size: .large, photoName: "sampleDog")
+//    ]
 }
 

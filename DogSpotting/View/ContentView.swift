@@ -17,7 +17,7 @@ struct ContentView: View {
             List(dogVM.dogsSeen) { dog in
                 HStack {
                     //User-inputted image of the dog spotted
-                    Image(dog.photoName)
+                    Image(uiImage: dog.image)
                         .resizable()
                         .scaledToFit()
                         .frame(maxHeight: 200.0)

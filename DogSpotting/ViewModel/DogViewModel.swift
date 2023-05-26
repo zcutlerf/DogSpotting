@@ -16,8 +16,8 @@ class DogViewModel: ObservableObject {
         loadDogs()
     }
     
-    func addNewDog(_ name: String, size: DogSize) {
-        let newDog = DogModel(name: name, size: size, photoName: "sampleDog")
+    func addNewDog(_ name: String, size: DogSize, image: UIImage) {
+        let newDog = DogModel(name: name, size: size, image: image)
         dogsSeen.append(newDog)
         saveDogs()
     }

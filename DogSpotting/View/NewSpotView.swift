@@ -27,7 +27,7 @@ struct NewSpotView: View {
                         .frame(maxHeight: 200.0)
                 } else {
                     Button {
-                        //TODO: Ask for the user's camera, and present ImagePicker view.
+                        isTakingPhoto = true
                     } label: {
                         HStack {
                             Image(systemName: "camera")
@@ -50,7 +50,7 @@ struct NewSpotView: View {
                                 
                 Section {
                     Button {
-                        dogVM.addNewDog(name, size: selectedSize)
+                        dogVM.addNewDog(name, size: selectedSize, image: uiimage!)
                         dismiss()
                     } label: {
                         HStack {
@@ -63,7 +63,7 @@ struct NewSpotView: View {
                     }
                     .buttonStyle(.borderedProminent)
                 }
-                .disabled(name == "")
+                .disabled(name == "" || uiimage == nil)
             }
             .navigationTitle("You saw one???")
         }.sheet(isPresented: $isTakingPhoto) {
