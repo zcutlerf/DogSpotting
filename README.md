@@ -48,14 +48,14 @@
 ## DAY 3
 ### Access Protected Resources
 1. In NewSpotView, add an action to the camera button to present the ImagePickerView
-    * Run this app on a real phone. What error prints to the console about trying to access the camera?
+    * Run this app on a real phone. What error prints to the console when trying to access the camera?
 2. Update the info.plist to request the user's permission to access their camera.
-    * To add a new key to your info.plist, select the xcodeproj file in your project navigator, select the info tab, select the plus button on the bottom-most key in “Custom iOS Target Properties”. 
+    * To add a new key to your info.plist, select the xcodeproj file in your project navigator, select the info tab, select the plus button on the bottom-most key in “Custom iOS Target Properties” and add you new key and description. 
 3. Run the app again. You should be able to access the camera. Take a photo and see what happens.
 4. To save the new photo to the DogModel, update DogModel to store a UIImage instead of a string imageName.
     * _Note: Check out UIImage+Codable.Swift if you want to learn how we were able to make a UIImage Codable so we could store it to the documents directory._
     * You can comment out the static property sampleDogs - 
-5. Change the addNewDog function to take in the UIImage we store in NewSpotView as a parameter.
+5. Change the addNewDog function to take in - as a parameter - the NewSpotView property called uiimage.
 6. Currently the save button is disabled if you haven't given the dog a name. Now we want to require the user to take a photo of the dog before saving it. Add to the .disabled modifier the condition to disable the button if the uiimage property is nil.
 7. ContentView shows a SwiftUI Image from a UIImage instead of based on a string name.
     * _Tip: Use the_ `Image(uiImage:)` _initializer to make this happen._
