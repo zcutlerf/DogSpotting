@@ -14,6 +14,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
+            // TODO: label views in a helpful way.
             List(dogVM.dogsSeen) { dog in
                 HStack {
                     //User-inputted image of the dog spotted

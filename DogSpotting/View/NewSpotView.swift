@@ -40,7 +40,6 @@ struct NewSpotView: View {
                 
                 TextField("Dog's Name", text: $name)
                 
-                //TODO: Update the picker to use the DogSize enum instead of String literals.
                 Picker("Dog Size", selection: $selectedSize) {
                     ForEach(DogSize.allCases) { size in
                         Text(size.rawValue)

@@ -15,11 +15,5 @@ struct DogModel: Identifiable, Codable {
     var dateSeen = Date()
     var size: DogSize
     var image: UIImage
-    
-//    static var sampleDogs: [DogModel] = [
-//        DogModel(name: "Fido", size: .small, photoName: "sampleDog"),
-//        DogModel(name: "Spot", size: .medium, photoName: "sampleDog"),
-//        DogModel(name: "Daisy", size: .large, photoName: "sampleDog")
-//    ]
 }
 
