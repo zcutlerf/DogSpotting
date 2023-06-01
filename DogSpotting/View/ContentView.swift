@@ -14,7 +14,8 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            // TODO: label views in a helpful way.
+            // TODO: add accessibility labels to views
+            // TODO: add an accent color, make sure it is usable in light, dark modes; normal, high contrast modes
             List(dogVM.dogsSeen) { dog in
                 HStack {
                     //User-inputted image of the dog spotted
