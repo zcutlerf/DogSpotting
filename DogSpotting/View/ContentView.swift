@@ -35,6 +35,7 @@ struct ContentView: View {
                         //Time when dog was seen
                         Text("Seen on \(dog.dateSeen.formatted())")
                             .foregroundColor(.secondary)
+                            .accessibilityLabel(dogVM.formattedDate(dog.dateSeen))
                     }
                 }
             }
@@ -47,7 +48,7 @@ struct ContentView: View {
                     Button {
                         isShowingNewSpotSheet.toggle()
                     } label: {
-                        Image(systemName: "eyes")
+                        Label("Add Dog", systemImage: "eyes")
                     }
                 }
             }

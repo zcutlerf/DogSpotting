@@ -29,4 +29,16 @@ class DogViewModel: ObservableObject {
     func loadDogs() {
         dogsSeen = DirectoryService.readModelFromDisk()
     }
+    
+    func formattedDate(_ date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .long
+        dateFormatter.timeStyle = .short
+
+        let date = date
+
+        // US English Locale (en_US)
+        dateFormatter.locale = Locale.current
+        return  dateFormatter.string(from: date) // Jan 2, 2001
+    }
 }
