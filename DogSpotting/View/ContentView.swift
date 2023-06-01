@@ -47,7 +47,7 @@ struct ContentView: View {
                     Button {
                         isShowingNewSpotSheet.toggle()
                     } label: {
-                        Label("New Dog", systemImage: "eyes")
+                        Image(systemName: "eyes")
                     }
                 }
             }
