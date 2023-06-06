@@ -7,12 +7,14 @@
 
 import SwiftUI
 import CoreHaptics
+import AVFoundation
 
 struct ContentView: View {
     @StateObject var dogVM = DogViewModel()
     
     @State private var isShowingNewSpotSheet = false
     @State var hapticEngine: CHHapticEngine?
+    var popSoundEffect: AVAudioPlayer?
     
     func playHaptic() {
         guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }
@@ -30,13 +32,22 @@ struct ContentView: View {
         }
     }
     
+    func playPopSoundEffect() {
+        popSoundEffect?.stop()
+        popSoundEffect?.play()
+    }
+    
     init() {
         // start the haptic engine
+        let audioPath = Bundle.main.path(forResource: "example.mp3", ofType:nil)!
+        let audioUrl = URL(fileURLWithPath: audioPath)
+
         do {
+            popSoundEffect = try AVAudioPlayer(contentsOf: audioUrl)
             try hapticEngine = CHHapticEngine()
             try hapticEngine?.start()
         } catch {
-            print(error)
+            print(error.localizedDescription)
         }
     }
     
@@ -76,6 +87,7 @@ struct ContentView: View {
                     Button {
                         isShowingNewSpotSheet.toggle()
                         playHaptic()
+                        playPopSoundEffect()
                     } label: {
                         Label("Add Dog", systemImage: "eyes")
                     }

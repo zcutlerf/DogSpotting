@@ -19,6 +19,7 @@
 		7478C72D29E6FF92006ED737 /* UIImage+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7478C72C29E6FF92006ED737 /* UIImage+Codable.swift */; };
 		7485F4DA29DF375500DD9419 /* DirectoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7485F4D929DF375500DD9419 /* DirectoryService.swift */; };
 		74BA5F5A29E5A77300C28F2F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA5F5929E5A77300C28F2F /* ImagePicker.swift */; };
+		74D0E6222A2F5CE500338009 /* pop.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 74D0E6212A2F5CE200338009 /* pop.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		7478C72C29E6FF92006ED737 /* UIImage+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Codable.swift"; sourceTree = "<group>"; };
 		7485F4D929DF375500DD9419 /* DirectoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryService.swift; sourceTree = "<group>"; };
 		74BA5F5929E5A77300C28F2F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		74D0E6212A2F5CE200338009 /* pop.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = pop.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				5D230DE12A0D838000BF6673 /* README.md */,
+				74D0E6212A2F5CE200338009 /* pop.m4a */,
 				5D2F293529DF09D8008A669D /* DogSpotting */,
 				5D2F293429DF09D8008A669D /* Products */,
 			);
@@ -191,6 +194,7 @@
 			files = (
 				5D230DE22A0D838000BF6673 /* README.md in Resources */,
 				5D2F293E29DF09D9008A669D /* Preview Assets.xcassets in Resources */,
+				74D0E6222A2F5CE500338009 /* pop.m4a in Resources */,
 				5D2F293B29DF09D9008A669D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
