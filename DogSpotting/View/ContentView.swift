@@ -39,6 +39,7 @@ struct ContentView: View {
     
     init() {
         // start the haptic engine
+        // create the audio player
         let audioPath = Bundle.main.path(forResource: "example.mp3", ofType:nil)!
         let audioUrl = URL(fileURLWithPath: audioPath)
 
