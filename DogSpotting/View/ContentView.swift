@@ -6,11 +6,39 @@
 //
 
 import SwiftUI
+import CoreHaptics
 
 struct ContentView: View {
     @StateObject var dogVM = DogViewModel()
     
     @State private var isShowingNewSpotSheet = false
+    @State var hapticEngine: CHHapticEngine?
+    
+    func playHaptic() {
+        guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }
+        var events = [CHHapticEvent]()
+        let intensity = CHHapticEventParameter(parameterID: .hapticIntensity, value: 1)
+        let sharpness = CHHapticEventParameter(parameterID: .hapticSharpness, value: 1)
+        let event = CHHapticEvent(eventType: .hapticTransient, parameters: [intensity, sharpness], relativeTime: 0)
+        events.append(event)
+        do {
+            let pattern = try CHHapticPattern(events: events, parameters: [])
+            let player = try hapticEngine?.makePlayer(with: pattern)
+            try player?.start(atTime: 0)
+        } catch {
+            print("Failed to play pattern: \(error.localizedDescription).")
+        }
+    }
+    
+    init() {
+        // start the haptic engine
+        do {
+            try hapticEngine = CHHapticEngine()
+            try hapticEngine?.start()
+        } catch {
+            print(error)
+        }
+    }
     
     var body: some View {
         NavigationStack {
@@ -47,6 +75,7 @@ struct ContentView: View {
                 ToolbarItem {
                     Button {
                         isShowingNewSpotSheet.toggle()
+                        playHaptic()
                     } label: {
                         Label("Add Dog", systemImage: "eyes")
                     }
